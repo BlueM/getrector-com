@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+
+use App\Controller\CodebaseRenovationController;
 use App\Controller\Demo\CustomRuleDetailController;
 
 use App\Controller\RuleDetailController;
@@ -52,6 +54,8 @@ Route::get('rss.xml', RssController::class);
 // on dev for now only
 Route::get('find-rule', FilterRectorController::class);
 Route::get('rule-detail/{slug}', RuleDetailController::class);
+
+Route::get('codebase-renovation', CodebaseRenovationController::class);
 
 // demo
 Route::get('demo/{uuid}', DemoDetailController::class)
